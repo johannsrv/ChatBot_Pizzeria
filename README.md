@@ -27,7 +27,9 @@
 
 1. Clona este repositorio: `git clone https://github.com/johannsrv/ChatBot_Pizzeria.git`
 2. Instala las dependencias necesarias: `pip install -r requirements.txt`
+3. Cuándo ya tengas los dos archivo el json y el ipynb en la misma carpeta ya puedes ejecutar el codigo y en la parte inferior del código puedes probar el chatbot
 
+NOTA: Ejecutar todo el programa, no toma mucho tiempo 
 
 ¡Disfruta explorando el Chatbot de la Pizzería y gracias por tu interés en este proyecto!
 ---
