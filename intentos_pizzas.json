@@ -1,0 +1,411 @@
+{
+    "intents": [
+        {
+            "intent": "Saludo",
+            "text": [
+                "Hola",
+                "Buenas",
+                "Hola, ¿cómo estás?",
+                "Buenas tardes",
+                "Buenas noches",
+                "Hola tienes servicio",
+                "tienes comida",
+                "Tienes servicio"
+            ],
+            "responses": [
+                "¡Hola! Hablas con Alfareroz pizza. ¿En qué te puedo ayudarte?",
+                "Hola, ¿cómo estás? ¿Qué te gustaría ordenar hoy?",
+                "Hola, ¿cómo puedo ayudarte hoy?"
+            ],
+            "extension": {
+                "function": "",
+                "entities": false,
+                "responses": []
+            },
+            "context": {
+                "in": "",
+                "out": "SolicitudPedido",
+                "clear": false
+            },
+            "entityType": "NA",
+            "entities": []
+        },
+        {
+            "intent": "PedidoCarta",
+            "text": [
+                "Quiero ver el menú",
+                "Que tienes de comer",
+                "Qué opciones tienen?",
+                "¿Puedes mostrarme la carta?",
+                "Menú por favor",
+                "¿Qué puedo ordenar?",
+                "Necesito ver las opciones",
+                "que tienes de comer",
+                "Tienes carta",
+                "Que comida tienes",
+                "Que me ofreces",
+                "Que tienes de comida"
+            ],
+            "responses": [
+                "Claro, aquí está nuestro menú:\n- Pizza Megafamilar: $60.000\n- Pizza Familiar: $35.000\n- Pizza por porcion: $6.500\n Tambien tenemos perros, hamburquesas, salchipapas, ¿Qué te gustaría ordenar? "
+            ],
+            "extension": {
+                "function": "",
+                "entities": false,
+                "responses": []
+            },
+            "context": {
+                "in": "",
+                "out": "PedidoRealizado",
+                "clear": false
+            },
+            "entityType": "NA",
+            "entities": []
+        },
+        {
+            "intent": "Clasedeperros",
+            "text": [
+                "Que perros tienes",
+                "De que tienes los perros",
+                "cuales perros me ofreces",
+                "como cuales perros tienes",
+                "Que tipo de perros tienes"
+            ],
+            "responses": [
+                "Tenemos perros calientes: Perro americano, Perro alfarero"
+            ],
+            "extension": {
+                "function": "",
+                "entities": false,
+                "responses": []
+            },
+            "context": {
+                "in": "",
+                "out": "",
+                "clear": false
+            },
+            "entityType": "NA",
+            "entities": []
+        },
+        {
+            "intent": "Clasedesalchipapa",
+            "text": [
+                "Que salchipapas tienes",
+                "De que tienes las salchipapa",
+                "cuales salchipapa me ofreces",
+                "como cuales salchipapa tienes",
+                "Que tipo de salchipapa tienes"
+            ],
+            "responses": [
+                "Tenemos Salchipapa: Salchipapa de salchicha americana y papas a la francesa, Tenemos perros calientes: Perro americano, Salchipapa alfarera"
+            ],
+            "extension": {
+                "function": "",
+                "entities": false,
+                "responses": []
+            },
+            "context": {
+                "in": "",
+                "out": "",
+                "clear": false
+            },
+            "entityType": "NA",
+            "entities": []
+        },
+        {
+            "intent": "ClasedeHamburguesas",
+            "text": [
+                "Que hamburguesas tienes",
+                "De que tienes las hamburguesas",
+                "cuales hamburguesas me ofreces",
+                "como cuales hamburguesas tienes",
+                "Que tipo de hamburguesas tienes"
+            ],
+            "responses": [
+                "Tenemos Hamburguesa: Hamburguesa de carne, hamburguesa de pello apanado, hamburguesa alfareras"
+            ],
+            "extension": {
+                "function": "",
+                "entities": false,
+                "responses": []
+            },
+            "context": {
+                "in": "",
+                "out": "",
+                "clear": false
+            },
+            "entityType": "NA",
+            "entities": []
+        },
+        {
+            "intent": "RealizarPedido",
+            "text": [
+                "Quiero ordenar una Pizza Megafamiliar y dos porciones de pizzas",
+                "Me gustaría una Pizza Familiar y 4 pizza por porcion",
+                "Quiero una Pizza Familiar",
+                "Voy a ordenar una Pizza porcion ",
+                "Puedes traerme 3 Pizza Mega familiar y una Pizza fmiliar",
+                "Deseo ordenar una Pizza mega familar",
+                "Puedes traerme tres Pizza Mega familiar y cinco Pizza fmiliar",
+                "Voy a ordenar 2 Pizza porcion "
+
+            ],
+            "responses": [
+                "Entendido. Para confirmar, has pedido:\n- <Cantidad> <Producto>\n¿Es correcto?"
+            ],
+            "extension": {
+                "function": "",
+                "entities": true,
+                "responses": []
+            },
+            "context": {
+                "in": "SolicitudPedido",
+                "out": "ConfirmarPedido",
+                "clear": false
+            },
+            "entityType": "NA",
+            "entities": [
+                {
+                    "entity": "Cantidad",
+                    "rangeFrom": 1,
+                    "rangeTo": 2
+                },
+                {
+                    "entity": "Producto",
+                    "rangeFrom": 3,
+                    "rangeTo": 6
+                }
+            ]
+        },
+        {
+            "intent": "ConfirmarPedido",
+            "text": [
+                "Sí, es correcto",
+                "Sí, confirmo",
+                "Todo está bien",
+                "Así es",
+                "Correcto",
+                "Sí, así es",
+                "si",
+                "esta todo bien",
+                "si señor"
+            ],
+            "responses": [
+                "Perfecto. ¿Cuál es tu dirección para la entrega?"
+            ],
+            "extension": {
+                "function": "",
+                "entities": false,
+                "responses": []
+            },
+            "context": {
+                "in": "",
+                "out": "SolicitudDireccion",
+                "clear": false
+            },
+            "entityType": "NA",
+            "entities": []
+        },
+        {
+            "intent": "AgregarQuitarPedido",
+            "text": [
+                "No, no es correcto",
+                "Quiero agregar/quitar algo",
+                "Deseo cambiar mi pedido"
+            ],
+            "responses": [
+                "¿Qué deseas agregar o quitar de tu pedido?"
+            ],
+            "extension": {
+                "function": "",
+                "entities": false,
+                "responses": []
+            },
+            "context": {
+                "in": "ConfirmarPedido",
+                "out": "RealizarPedido",
+                "clear": false
+            },
+            "entityType": "NA",
+            "entities": []
+        },
+        {
+            "intent": "IngredientesPizza",
+            "text": [
+                "Que sabores de pizzas tienes",
+                "que tipo de pizza tienes",
+                "Que pizzas me ofrece",
+                "De que tiene las pizzas",
+                "Cuales pizzas tienes"
+            ],
+            "responses": [
+                "Nuestras pizzas vienen en varios sabores. Por ejemplo, la pizza de carnes de pollo con champiñones y criolla"
+            ],
+            "extension": {
+                "function": "",
+                "entities": false,
+                "responses": []
+            },
+            "context": {
+                "in": "",
+                "out": "",
+                "clear": false
+            },
+            "entityType": "NA",
+            "entities": []
+        },
+        {
+            "intent": "IngredientesEspecificosCriolla",
+            "text": [
+                "¿Qué ingredientes tiene la pizza criolla?",
+                "Dime los ingredientes de la pizza criolla",
+                "que trae la pizza criolla",
+                "Que tra la criolla",
+                "Que trae la pizza de criolla"
+            ],
+            "responses": [
+                "La pizza criolla lleva ingredientes como carnes desmechadas, salsa de la casa, chorizo, salami."
+            ],
+            "extension": {
+                "function": "",
+                "entities": false,
+                "responses": []
+            },
+            "context": {
+                "in": "IngredientesPizza",
+                "out": "",
+                "clear": false
+            },
+            "entityType": "NA",
+            "entities": []
+        },
+        {
+            "intent": "IngredientesEspecificosPollo",
+            "text": [
+                "¿Qué ingredientes tiene la pizza poolo con champiñon?",
+                "Dime los ingredientes de la pizza pollo con champiñon",
+                "Que tra la de pollo con pello con champiñon",
+                "Que trae la pizza de pollo con champiñon",
+                "¿Qué ingredientes tiene la pizza de pollo",
+                "Dime los ingredientes de la pizza de pollo",
+                "Que tra la de pollo con pello",
+                "Que trae la pizza de pollo"
+            ],
+            "responses": [
+                "La pizza pollo con champiñon lleva ingredientes como pollo y champiñon"
+            ],
+            "extension": {
+                "function": "",
+                "entities": false,
+                "responses": []
+            },
+            "context": {
+                "in": "IngredientesPizza",
+                "out": "",
+                "clear": false
+            },
+            "entityType": "NA",
+            "entities": []
+        },
+        {
+            "intent": "IngredientesEspecificoscarnes",
+            "text": [
+                "¿Qué ingredientes tiene la pizza carnes?",
+                "Dime los ingredientes de la pizza carnes",
+                "Que tra la de carnes",
+                "Que trae la pizza de carnes"
+            ],
+            "responses": [
+                "La pizza carnes lleva ingredientes como salami peperoni y jamon."
+            ],
+            "extension": {
+                "function": "",
+                "entities": false,
+                "responses": []
+            },
+            "context": {
+                "in": "IngredientesPizza",
+                "out": "",
+                "clear": false
+            },
+            "entityType": "NA",
+            "entities": []
+        },
+        {
+            "intent": "PorcionesPizzaMG",
+            "text": [
+                "¿Cuántas porciones tiene la pizza Mega?",
+                "Dime el número de porciones de la pizza Mega"
+            ],
+            "responses": [
+                "La pizza Mega tiene 9 porciones."
+            ],
+            "extension": {
+                "function": "",
+                "entities": false,
+                "responses": []
+            },
+            "context": {
+                "in": "PedidoCarta",
+                "out": "",
+                "clear": false
+            },
+            "entityType": "NA",
+            "entities": []
+        },
+        {
+            "intent": "PorcionesPizzaF",
+            "text": [
+                "¿Cuántas porciones tiene la pizza Familiar?",
+                "Dime el número de porciones de la pizza Familiar"
+            ],
+            "responses": [
+                "La pizza Mega tiene 4 porciones."
+            ],
+            "extension": {
+                "function": "",
+                "entities": false,
+                "responses": []
+            },
+            "context": {
+                "in": "PedidoCarta",
+                "out": "",
+                "clear": false
+            },
+            "entityType": "NA",
+            "entities": []
+        },
+        {
+            "intent": "ProporcionarDireccion",
+            "text": [
+                "Mi dirección es Torre 5 Quintas de modelia 1",
+                "Vivo en la calle 456",
+                "La dirección es quintas 2 casa 25",
+                "Estoy en el apartamento 101 de quintas 3",
+                "Mi dirección para la entrega es Calle Secundaria 246",
+                "La dirección para el envío es Calle Principal, Edificio 3, Apartamento 5"
+            ],
+            "responses": [
+                "¡Gracias! Tu pedido ha sido enviado para preparación. Será entregado en la siguiente dirección: <Dirección>"
+            ],
+            "extension": {
+                "function": "",
+                "entities": true,
+                "responses": []
+            },
+            "context": {
+                "in": "SolicitudDireccion",
+                "out": "",
+                "clear": true
+            },
+            "entityType": "NA",
+            "entities": [
+                {
+                    "entity": "Dirección",
+                    "rangeFrom": 5,
+                    "rangeTo": 12
+                }
+            ]
+        }
+    ]
+}
