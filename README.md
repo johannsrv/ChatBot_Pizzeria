@@ -12,9 +12,11 @@
 
 ## Funcionalidades
 
-- **Gestión de Pedidos:** Los clientes pueden realizar pedidos de pizzas y otros productos disponibles.
-- **Consulta de Menú:** Los usuarios pueden consultar el menú disponible y obtener información detallada sobre los productos.
-- **Atención al Cliente:** El chatbot proporciona soporte y resuelve preguntas frecuentes de los clientes.
+- El chatbot diseñado ofrece una experiencia interactiva centrada en la gestión de pedidos de comida. Al iniciar una conversación, el cliente es recibido con un saludo cordial, al que el chatbot responde también con un saludo y una oferta de asistencia para ayudar al cliente en lo que necesite.
+- Para facilitar la navegación, el cliente tiene la opción de solicitar el menú al chatbot en caso de no estar familiarizado con las opciones disponibles. El chatbot responderá con una lista detallada de los platos disponibles, proporcionando así al cliente la información necesaria para realizar su selección
+- En el caso de que el cliente ya conozca el menú y desee hacer un pedido, puede comunicarlo directamente al chatbot. El chatbot procesará el pedido del cliente y le confirmará los elementos seleccionados para asegurarse de que se haya registrado correctamente.
+- Una vez confirmado el pedido, el chatbot guiará al cliente para que proporcione la dirección de entrega. Una vez que se haya proporcionado la dirección, el chatbot informará al cliente que el pedido ha sido enviado para su preparación.
+- Este flujo de interacción garantiza una experiencia fluida y eficiente para el cliente, proporcionándole la información necesaria y gestionando sus pedidos de manera precisa y oportuna.
 
 ## Tecnologías Utilizadas
 
@@ -23,9 +25,9 @@
 
 ## Instalación y Uso
 
-1. Clona este repositorio: `git clone https://github.com/tu_usuario/nombre_del_repositorio.git`
+1. Clona este repositorio: `git clone https://github.com/johannsrv/ChatBot_Pizzeria.git`
 2. Instala las dependencias necesarias: `pip install -r requirements.txt`
-3. Ejecuta el chatbot: `python chatbot.py`
+
 
 ¡Disfruta explorando el Chatbot de la Pizzería y gracias por tu interés en este proyecto!
 ---
